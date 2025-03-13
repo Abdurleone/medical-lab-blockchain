@@ -5,7 +5,7 @@ async function main() {
 
     // Deploy contract
     const labTestResults = await LabTestResults.deploy();
-    await labTestResults.deployed(); // Ensure it's properly deployed
+    await labTestResults.deployTransaction.wait(); // Wait for deployment confirmation
 
     console.log("LabTestResults deployed to:", labTestResults.address);
 }
